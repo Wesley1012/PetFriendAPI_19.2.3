@@ -1,11 +1,13 @@
 import requests
 import json
 from requests_toolbelt.multipart.encoder import MultipartEncoder
+from utils import api_logger
 
 class PetFriends:
     def __init__(self):
         self.base_url = "https://petfriends.skillfactory.ru/"
 
+    @api_logger
     def get_api_key(self, email: str, password: str) -> json:
 
         headers = {
@@ -20,9 +22,10 @@ class PetFriends:
             result = res.text
         return status, result
 
+    @api_logger
     def get_list_pets(self, auth_key: json, filter: str="" ) -> json:
         headers = {'auth_key': auth_key["key"]}
-        fiter = {"filter": filter}
+        # filter = {"filter": filter}
         res = requests.get(self.base_url+'api/pets', headers=headers, params=filter)
         status = res.status_code
         result = ""
@@ -32,9 +35,10 @@ class PetFriends:
             result = res.text
         return status, result
 
-    def get_list_all_pets(self, auth_key: json, params: str) -> json:
+    @api_logger
+    def get_list_all_pets(self, auth_key: json, filter: str) -> json:
         headers = {'auth_key': auth_key["key"]}
-        res = requests.get(self.base_url+'api/pets', headers=headers, params="all_pets")
+        res = requests.get(self.base_url+'api/pets', headers=headers, params=filter)
         status = res.status_code
         result = ""
         try:
@@ -43,7 +47,7 @@ class PetFriends:
             result = res.text
         return status, result
 
-
+    @api_logger
     def add_new_pet(self, auth_key: json, name: str, animal_type: str,
                     age: str, pet_photo: str) -> json:
 
@@ -65,6 +69,7 @@ class PetFriends:
             result = res.text
         return status, result
 
+    @api_logger
     def add_new_pet_without_photo(self, auth_key, name, animal_type, age):
         data = {
                 'name': name,
@@ -81,6 +86,7 @@ class PetFriends:
             result = res.text
         return status, result
 
+    @api_logger
     def add_photo_for_pet(self, auth_key, pet_id, pet_photo):
 
         data = MultipartEncoder(
@@ -98,6 +104,7 @@ class PetFriends:
 
         return status, result
 
+    @api_logger
     def delete_pet(self, auth_key: str, id_pet: str) -> json:
         headers = {"auth_key": auth_key["key"]}
         res = requests.delete(self.base_url + f"api/pets/{id_pet}", headers=headers)
@@ -109,6 +116,7 @@ class PetFriends:
             result = res.text
         return status, result
 
+    @api_logger
     def update_pet_info(self, auth_key: json, pet_id: str, name: str, animal_type: str,
                     age: str) -> json:
         headers = {"auth_key": auth_key["key"]}
