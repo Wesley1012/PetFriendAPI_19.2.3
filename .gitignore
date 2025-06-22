@@ -1,6 +1,7 @@
 .venv1/
 .venv/
-draft_of_tests.ry
+__pycache__/
+draft_of_tests.py
 log.txt
 other.py
 old_test.py

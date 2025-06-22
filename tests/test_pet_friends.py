@@ -14,7 +14,7 @@ def test_get_api_key_for_valid_user(email=valid_login, password=valid_password):
     assert status == 200
     assert "key" in result
 
-# Получаем список питомцев
+
 '''Большенство проверок с mark.parametrize явно негативные, но документация позволяет, поэтому эти проверки в модуле с позитивними'''
 
 @pytest.mark.get
