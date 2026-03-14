@@ -7,5 +7,5 @@ log.txt
 other.py
 old_test.py
 structure.txt
-__pycache__/
+
 allure-results/
