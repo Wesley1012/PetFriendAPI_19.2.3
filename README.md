@@ -26,8 +26,8 @@ PetFriendAPI_19.2.3/
 ├── api.py # API клиент (все эндпоинты)
 ├── conftest.py # Pytest фикстуры
 ├── pytest.ini # Конфигурация pytest
-├── settings.py # Настройки и credentials
-├── test_data.py # Тестовые данные (генерация строк, чисел)
+├── settings.py # Пара строк для запуска
+├── test_data.py # Тестовые данные
 ├── utils.py # Вспомогательные функции (логгер)
 ├── tests/ # Директория с тестами
 │ ├── images/ # Изображения для тестов
