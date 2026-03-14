@@ -60,15 +60,15 @@ PetFriendAPI_19.2.3/
 git clone https://github.com/Wesley1012/PetFriendAPI_19.2.3.git  
 cd PetFriendAPI_19.2.3  
 
-# Создать виртуальное окружение
+## 2. Создать виртуальное окружение
 python -m venv .venv    
 source .venv/bin/activate  # Linux/Mac  
 .venv\Scripts\activate     # Windows    
 
-# Установить зависимости
+## 3. Установить зависимости
 pip install -r requirements.txt    
 
-# Установить Allure (для отчётов)  
+## 4. Установить Allure (для отчётов)  
 sudo pacman -S allure # Arch Linux  
 brew install allure # macOS  
 scoop install allure # Windows (scoop)  
