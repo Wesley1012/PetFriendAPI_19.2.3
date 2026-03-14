@@ -1,7 +1,11 @@
 .venv1/
 .venv/
+.idea/
 __pycache__/
 draft_of_tests.py
 log.txt
 other.py
 old_test.py
+structure.txt
+__pycache__/
+allure-results/
