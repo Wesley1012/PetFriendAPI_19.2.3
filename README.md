@@ -57,16 +57,16 @@ PetFriendAPI_19.2.3/
 # Установка и запуск
 
 ## 1. Клонировать репозиторий
-git clone https://github.com/Wesley1012/PetFriendAPI_19.2.3.git
-cd ApiTests
+git clone https://github.com/Wesley1012/PetFriendAPI_19.2.3.git  
+cd ApiTests  
 
 # Создать виртуальное окружение
-python -m venv .venv  
-source .venv/bin/activate  # Linux/Mac
-.venv\Scripts\activate     # Windows  
+python -m venv .venv    
+source .venv/bin/activate  # Linux/Mac  
+.venv\Scripts\activate     # Windows    
 
 # Установить зависимости
-pip install -r requirements.txt  
+pip install -r requirements.txt    
 
 # Установить Allure (для отчётов)  
 sudo pacman -S allure # Arch Linux  
@@ -74,6 +74,6 @@ brew install allure # macOS
 scoop install allure # Windows (scoop)  
 
 # Запустить тесты
-pytest
-allure serve allure-results # Allure отчёты
+pytest  
+allure serve allure-results # Allure отчёты  
 
