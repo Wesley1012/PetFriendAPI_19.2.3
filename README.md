@@ -58,7 +58,7 @@ PetFriendAPI_19.2.3/
 
 ## 1. Клонировать репозиторий
 git clone https://github.com/Wesley1012/PetFriendAPI_19.2.3.git  
-cd ApiTests  
+cd PetFriendAPI_19.2.3  
 
 # Создать виртуальное окружение
 python -m venv .venv    
